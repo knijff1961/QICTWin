@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED80C3B5-7567-4D9A-9A99-F1445E148DA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QICTWin</RootNamespace>
+    <AssemblyName>QICTWin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsGlobal.cs" />
+    <Compile Include="clsLog.cs" />
+    <Compile Include="clsPair.cs" />
+    <Compile Include="clsParam.cs" />
+    <Compile Include="clsRegression.cs" />
+    <Compile Include="clsResult.cs" />
+    <Compile Include="clsUserTestSet.cs" />
+    <Compile Include="clsVariable.cs" />
+    <Compile Include="Org\ArraySupport.cs" />
+    <Compile Include="Org\clsPairwise.cs" />
+    <Compile Include="Org\clsTest.cs" />
+    <Compile Include="Org\Enums.cs" />
+    <Compile Include="Org\frmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Org\frmHistory.Designer.cs">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Org\frmLogging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Org\frmLogging.Designer.cs">
+      <DependentUpon>frmLogging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Org\frmPairwise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Org\frmPairwise.Designer.cs">
+      <DependentUpon>frmPairwise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Org\frmRegression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Org\frmRegression.Designer.cs">
+      <DependentUpon>frmRegression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Org\ListExtentions.cs" />
+    <Compile Include="Org\presets.cs" />
+    <Compile Include="Org\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Org\qsort.cs" />
+    <Compile Include="Org\SimpleRNG.cs" />
+    <Compile Include="Org\Stringsupport.cs" />
+    <EmbeddedResource Include="Org\frmHistory.resx">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Org\frmLogging.resx">
+      <DependentUpon>frmLogging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Org\frmPairwise.resx">
+      <DependentUpon>frmPairwise.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Org\frmRegression.resx">
+      <DependentUpon>frmRegression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

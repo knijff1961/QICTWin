@@ -1,0 +1,35 @@
+@TestSet
+Param0: a1, b2
+Param1: c2, d2, e2, f2
+Param2: g3, h3, i3
+Param3: j4, k4
+
+@Regression
+Param0,Param1,Param2,Param3
+a1,c2,g3,j4
+b2,c2,h3,k4
+a1,d2,i3,k4
+b2,e2,i3,j4
+b2,f2,g3,k4
+a1,d2,h3,j4
+a1,e2,g3,k4
+a1,f2,h3,j4
+a1,c2,i3,j4
+b2,d2,g3,j4
+a1,e2,h3,j4
+a1,f2,i3,j4
+@Expect
+       Param0 Param1 Param2 Param3
+
++ 0    a1     c2     g3     j4    
++ 1    b2     c2     h3     k4    
++ 2    a1     d2     i3     k4    
++ 3    b2     e2     i3     j4    
++ 4    b2     f2     g3     k4    
++ 5    a1     d2     h3     j4    
++ 6    a1     e2     g3     k4    
++ 7    a1     f2     h3     j4    
++ 8    a1     c2     i3     j4    
++ 9    b2     d2     g3     j4    
++ 10   a1     e2     h3     j4    
++ 11   a1     f2     i3     j4
